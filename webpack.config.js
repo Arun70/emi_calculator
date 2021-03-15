@@ -13,6 +13,7 @@ const cssPlugin = new MiniCssPlugin({
 
 const config = devMode => ({
   entry: './src/js/index.js',
+  mode: 'development',
   module: {
     rules: [
       {
