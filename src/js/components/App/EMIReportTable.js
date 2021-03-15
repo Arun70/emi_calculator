@@ -2,8 +2,6 @@ import React from 'react';
 import { EMIReportTableRow } from './EMIReportTableRow';
 
 export const EMIReportTable = props => {
-  // const row = <EMIReportTableRow rows={props} />;
-  console.log('sfsdf', props);
   return (
     <div className="reporttable">
       <h2>Monthly Report</h2>
@@ -17,31 +15,18 @@ export const EMIReportTable = props => {
             <th>Balance</th>
             <th>Loan Paid Till Date</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>&#8377; 1000</td>
-            <td>&#8377; 1.25</td>
-            <td>&#8377; 1005</td>
-            <td>&#8377; 990</td>
-            <td>3%</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>&#8377; 1111</td>
-            <td>&#8377; 3</td>
-            <td>&#8377; 1111</td>
-            <td>&#8377; 1123</td>
-            <td>9%</td>
-          </tr>
-          {props.reportTable.map(data => {
-            <tr>
-              <td>{data[month]}</td>
-              <td>&#8377; {data[principal].toFixed(2)}</td>
-              <td>&#8377; {data[interest].toFixed(2)}</td>
-              <td>&#8377; {(data[principal] + data[interest]).toFixed(2)}</td>
-              <td>&#8377; {data[balance].toFixed(2)}</td>
-              <td>{data[loan_paid].toFixed(2)}%</td>
-            </tr>;
+
+          {props.reportTable.map((data, i) => {
+            return [
+              <tr key={i}>
+                <td>{data.month}</td>
+                <td>&#8377; {data.principal}</td>
+                <td>&#8377; {data.interest}</td>
+                <td>&#8377; {data.principal + data.interest}</td>
+                <td>&#8377; {data.balance}</td>
+                <td>{data.loan_paid}%</td>
+              </tr>
+            ];
           })}
         </tbody>
       </table>

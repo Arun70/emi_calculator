@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EMISummary = props => {
-  console.log('hi', props);
+  // console.log('hi', props);
   return (
     <div className="emiSummary">
       <div className="monthly_emi">
