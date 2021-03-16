@@ -8,41 +8,17 @@ export default class EMIForm extends React.Component {
       intr: this.props.interest || 0,
       ten: this.props.tenure || 0
     };
-    // this.handleStateChange = this.handleStateChange.bind(this);
-    this.updateParent = this.updateParent.bind(this);
   }
 
-  // handleStateChange = e => {
-  //   const value = e.target.value;
-  //   this.setState({
-  //     ...this.state,
-  //     [e.target.name]: value
-  //   });
-  //   this.props.handleFormInput(this.state);
-  // };
-
-  prinStateChange = e => {
-    const value = e.target.value;
-    this.setState({
-      pr: value
-    });
-    this.updateParent();
-  };
-
-  interestStateChange = e => {
-    const value = e.target.value;
-    this.setState({
-      intr: value
-    });
-    this.updateParent();
-  };
-
-  tenureStateChange = e => {
-    const value = e.target.value;
-    this.setState({
-      ten: value
-    });
-    this.updateParent();
+  handleStateChange = e => {
+    const value = parseInt(e.target.value);
+    this.setState(
+      {
+        ...this.state,
+        [e.target.name]: value
+      },
+      this.updateParent
+    );
   };
 
   updateParent = () => {
@@ -62,8 +38,8 @@ export default class EMIForm extends React.Component {
               <input
                 type="number"
                 placeholder="Enter principal amount"
-                onChange={e => this.prinStateChange(e)}
-                name="principal"
+                onChange={e => this.handleStateChange(e)}
+                name="pr"
               />
             </div>
             <div className="form-group">
@@ -73,8 +49,8 @@ export default class EMIForm extends React.Component {
               <input
                 type="number"
                 placeholder="Enter interest rate"
-                onChange={e => this.interestStateChange(e)}
-                name="interest"
+                onChange={e => this.handleStateChange(e)}
+                name="intr"
               />
             </div>
             <div className="form-group">
@@ -84,8 +60,8 @@ export default class EMIForm extends React.Component {
               <input
                 type="number"
                 placeholder="Enter duration (In Months)"
-                onChange={e => this.tenureStateChange(e)}
-                name="tenure"
+                onChange={e => this.handleStateChange(e)}
+                name="ten"
               />
             </div>
             {/* <button

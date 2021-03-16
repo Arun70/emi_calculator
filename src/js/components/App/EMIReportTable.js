@@ -1,5 +1,4 @@
 import React from 'react';
-import { EMIReportTableRow } from './EMIReportTableRow';
 
 export const EMIReportTable = props => {
   return (
@@ -24,7 +23,7 @@ export const EMIReportTable = props => {
                 <td>&#8377; {data.interest}</td>
                 <td>&#8377; {data.principal + data.interest}</td>
                 <td>&#8377; {data.balance}</td>
-                <td>{data.loan_paid}%</td>
+                <td>{data.loan_paid} %</td>
               </tr>
             ];
           })}

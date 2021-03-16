@@ -14,10 +14,6 @@ export class App extends React.Component {
       reportTableData: [],
       summary: { monthly_emi: 0, total_interest: 0, total_payment: 0 }
     };
-
-    this.calculateEMI = this.calculateEMI.bind(this);
-    // this.handleSummary = this.handleSummary.bind(this);
-    // this.handleReport = this.handleReport.bind(this);
   }
 
   handleFormInput = formData => {
@@ -25,9 +21,10 @@ export class App extends React.Component {
       principal: formData.pr,
       interest: formData.intr,
       tenure: formData.ten
+    }, () => {
+        this.handleSummary();
+        this.handleReport();
     });
-    this.handleSummary();
-    this.handleReport();
   };
 
   handleSummary = () => {
@@ -43,17 +40,20 @@ export class App extends React.Component {
   handleReport = () => {
     let a = 0;
     let { principal, interest, tenure } = this.state;
+    let pr = principal, intr = interest, ten = tenure;
+    intr = intr / 12 / 100;
     let monthly_emi = this.calculateEMI();
     let reportData = [];
 
-    while (a < tenure) {
+    while (a < ten) {
       let dataObject = {};
       dataObject.month = a + 1;
-      dataObject.interest = Math.round(principal * interest);
+      dataObject.interest = Math.round(pr * intr);
       dataObject.principal = Math.round(monthly_emi - dataObject.interest);
-      dataObject.balance = Math.round(principal - dataObject.principal);
-      dataObject.loan_paid = (100 * (principal - dataObject.balance)) / principal;
-      principal = dataObject.balance;
+      dataObject.balance = Math.round(pr - dataObject.principal)
+      dataObject.balance = Math.round(pr-dataObject.principal)
+      dataObject.loan_paid = this.roundNumber((100 * (principal - dataObject.balance)) / principal);
+      pr = (dataObject.balance);
       a++;
       reportData.push(dataObject);
     }
@@ -63,11 +63,19 @@ export class App extends React.Component {
     });
   };
 
+  roundNumber = (number,decimal=2) => {
+    let dummyMultiply = Math.pow(10, decimal);
+    const fixedValue = Math.round(number * dummyMultiply)
+    console.log('fixedVlue',fixedValue)
+    const floatedValue = fixedValue/dummyMultiply
+    return floatedValue
+  }
+
   calculateEMI = () => {
-    const { principal, tenure } = this.state;
-    let { interest } = this.state;
-    interest = interest / 12 / 100;
-    const mEMI = principal * interest * ((Math.pow((1+interest),tenure))/((Math.pow((1+interest),tenure))-1))
+    const { principal, interest, tenure } = this.state;
+    let pr = principal, intr = interest, ten = tenure;
+    intr = intr / 12 / 100;
+    let mEMI = pr * (intr / (1 - Math.pow(1 + intr, -ten)) )
     return Math.round(mEMI);
   };
 
