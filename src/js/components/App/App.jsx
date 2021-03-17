@@ -51,7 +51,6 @@ export class App extends React.Component {
       dataObject.month = a + 1;
       dataObject.interest = Math.round(pr * intr);
       dataObject.principal = Math.round(monthly_emi - dataObject.interest);
-      dataObject.balance = Math.round(pr - dataObject.principal)
       dataObject.balance = Math.round(pr-dataObject.principal)
       dataObject.loan_paid = this.roundNumber((100 * (principal - dataObject.balance)) / principal);
       pr = (dataObject.balance);
@@ -67,7 +66,6 @@ export class App extends React.Component {
   roundNumber = (number,decimal=2) => {
     let dummyMultiply = Math.pow(10, decimal);
     const fixedValue = Math.round(number * dummyMultiply)
-    console.log('fixedVlue',fixedValue)
     const floatedValue = fixedValue/dummyMultiply
     return floatedValue
   }
@@ -77,6 +75,7 @@ export class App extends React.Component {
     let pr = principal, intr = interest, ten = tenure;
     intr = intr / 12 / 100;
     let mEMI = pr * (intr / (1 - Math.pow(1 + intr, -ten)) )
+    console.log('mock',mEMI)
     return Math.round(mEMI);
   };
 
