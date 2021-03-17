@@ -1,12 +1,13 @@
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
+import './App.css';
 
 const EMISummary = props => {
   return (
     <div className="emiSummary">
-      <div>
+      <div className="inlineBlock" style={{ width: '40%' }}>
         <div className="monthly_emi">
-          <h2>Loan EMI</h2>
+          <h2 className="underline">Loan EMI</h2>
           <h3>
             &#8377;{' '}
             {Math.round(props.summary.monthly_emi) !== NaN &&
@@ -15,7 +16,7 @@ const EMISummary = props => {
           </h3>
         </div>
         <div className="total_interest">
-          <h2>Total Interest Payable</h2>
+          <h2 className="underline">Total Interest Payable</h2>
           <h3>
             &#8377;{' '}
             {Math.round(props.summary.total_interest) !== NaN &&
@@ -24,7 +25,7 @@ const EMISummary = props => {
           </h3>
         </div>
         <div className="total_payment">
-          <h2>Total Payment</h2>
+          <h2 className="underline">Total Payment</h2>
           <h3>
             &#8377;{' '}
             {Math.round(props.summary.total_payment) !== NaN &&
@@ -33,8 +34,8 @@ const EMISummary = props => {
           </h3>
         </div>
       </div>
-      <div style={{ width: '20%', height: '20%' }}>
-        <div>
+      <div className="inlineBlock">
+        <div className="centerPlacement">
           <h3>Break-up of Total Payment</h3>
         </div>
         <PieChart
@@ -52,9 +53,27 @@ const EMISummary = props => {
             }
           ]}
         />
-        <div>
-          <h4 style={{ color: '#21aa47' }}>Principal Amount:</h4>
-          <h4 style={{ color: '#fd7e14' }}>Total Payment:</h4>
+        <div style={{ display: 'flex' }}>
+          <h4
+            className="horizontalMargin"
+            style={{
+              color: 'black',
+              border: '1px solid #21aa47',
+              backgroundColor: '#21aa47'
+            }}
+          >
+            Principal Amount
+          </h4>
+          <h4
+            className="horizontalMargin"
+            style={{
+              color: 'black',
+              border: '1px solid #fd7e14',
+              backgroundColor: '#fd7e14'
+            }}
+          >
+            Total Payment
+          </h4>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 export default class EMIForm extends React.Component {
   constructor(props) {
@@ -28,15 +29,19 @@ export default class EMIForm extends React.Component {
   render() {
     return (
       <div className="form-container">
-        <h1>Home Loan</h1>
+        <h1 className="centerPlacement" style={{ fontSize: '50px' }}>
+          Home Loan
+        </h1>
         <div className="form">
           <form className="emi-form">
             <div className="form-group">
               <label htmlFor="principal">
-                <b>Principal (&#8377;) </b>
+                <b>Principal (&#8377;) :</b>
               </label>
               <input
                 type="number"
+                className="marginLeft"
+                size="10"
                 placeholder="Enter principal amount"
                 onChange={e => this.handleStateChange(e)}
                 name="pr"
@@ -44,10 +49,12 @@ export default class EMIForm extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="interest">
-                <b>Interest Rate (%) </b>
+                <b>Interest Rate (%) :</b>
               </label>
               <input
                 type="number"
+                className="marginLeft"
+                size="10"
                 placeholder="Enter interest rate"
                 onChange={e => this.handleStateChange(e)}
                 name="intr"
@@ -55,21 +62,17 @@ export default class EMIForm extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="tenure">
-                <b>Loan Tenure </b>
+                <b>Loan Tenure :</b>
               </label>
               <input
                 type="number"
+                className="marginLeft"
+                size="10"
                 placeholder="Enter duration (In Months)"
                 onChange={e => this.handleStateChange(e)}
                 name="ten"
               />
             </div>
-            {/* <button
-              type="submit"
-              onClick={() => this.props.handleFormInput(this.state)}
-            >
-              Calculate EMI
-            </button> */}
           </form>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import React from 'react';
+import './App.css';
 
 export const EMIReportTable = props => {
   return (
     <div className="reporttable">
       <h2>Monthly Report</h2>
       <table className="table table-striped table-hover">
-        <tbody>
+        <tbody id="monthlyReport">
           <tr>
             <th>Month</th>
             <th>Principal (P)</th>

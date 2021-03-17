@@ -2,6 +2,7 @@ import React from 'react';
 import EMIForm from './EMIForm';
 import EMISummary from './EMISummary';
 import { EMIReportTable } from './EMIReportTable';
+import './App.css'
 
 export class App extends React.Component {
   constructor(props) {
@@ -83,7 +84,7 @@ export class App extends React.Component {
       return (
         
       <div className="emi-calculator-contaienr">
-        <div className="emi-form">
+        <div className="emi-form center">
                   <EMIForm
                       handleFormInput={this.handleFormInput}
                       principal={this.state.principal}
@@ -91,10 +92,10 @@ export class App extends React.Component {
                       tenure={this.state.tenure}
                   />
         </div>
-        <div className="emi-summary">
+        <div className="emi-summary center">
           <EMISummary summary={this.state.summary} />
         </div>
-        <div className="emi-report-table">
+        <div className="emi-report-table center">
           <EMIReportTable reportTable={this.state.reportTableData} />
         </div>
       </div>
