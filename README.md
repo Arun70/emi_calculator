@@ -71,5 +71,4 @@ Once you are finished with the task, please click the `Complete task` link on <a
 - Clone the repo onto your local machine
 - from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn install" to download dependencies
 - from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn start" to run the project
-
-* Open "http://localhost:8080/" into browser (prefer chrome) to see the running project
+- Open "http://localhost:8080/" into browser (prefer chrome) to see the running project
