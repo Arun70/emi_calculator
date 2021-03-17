@@ -7,7 +7,7 @@
   width: 50%;
   border: 1px solid black;
   padding: 10px;
-  background-color: #c8e462;
+  background-color: #ddd;
 }
 
 .form-group {
@@ -48,7 +48,7 @@ table {
 }
 
 #monthlyReport td {
-  background-color: rgb(210, 211, 241);
+  background-color: #b6c7e7;
 }
 
 #monthlyReport tr:hover {
