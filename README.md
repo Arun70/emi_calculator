@@ -56,6 +56,12 @@ Once you are finished with the task, please click the `Complete task` link on <a
 
 # EMI Calculator Output image
 
-- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-10.png?raw=true)
-- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-23.png?raw=true)
-- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-36.png?raw=true)
+- <p align="center">
+    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a1.png">
+  </p>
+- <p align="center">
+    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a2.png">
+  </p>
+- <p align="center">
+    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a3.png">
+  </p>
