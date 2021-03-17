@@ -30,7 +30,7 @@ export default class EMIForm extends React.Component {
     return (
       <div className="form-container">
         <h1 className="centerPlacement" style={{ fontSize: '50px' }}>
-          Home Loan
+          EMI Calculator
         </h1>
         <div className="form">
           <form className="emi-form">
