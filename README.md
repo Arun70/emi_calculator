@@ -65,3 +65,9 @@ Once you are finished with the task, please click the `Complete task` link on <a
 - <p align="center">
     <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a3.png">
   </p>
+
+# How to run the project
+
+- Clone the repo onto your local machine
+- from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn install" to download dependencies
+- from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn start" to run the project
