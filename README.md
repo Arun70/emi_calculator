@@ -53,3 +53,9 @@ Please consider these tasks when you are building this application,
 Please push your changes to the `master branch` of this repository. You can push one or more commits. <br>
 
 Once you are finished with the task, please click the `Complete task` link on <a href="https://app.codescreen.dev/#/codescreentestd2a13286-20c8-485b-8fb9-5480289c0097" target="_blank">this screen</a>.
+
+# EMI Calculator Output image
+
+- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-10.png?raw=true)
+- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-23.png?raw=true)
+- (https://github.com/Arun70/CodeScreen_c7ykjth0/blob/myWork/Screenshot from 2021-03-17 05-42-36.png?raw=true)
