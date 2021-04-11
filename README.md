@@ -69,6 +69,6 @@ Once you are finished with the task, please click the `Complete task` link on <a
 # How to run the project
 
 - Clone the repo onto your local machine
-- from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn install" to download dependencies
-- from inside the directory (i.e. CodeScreen_c7ykjth0) run "yarn start" to run the project
+- from inside the directory (i.e. emi_calculator) run "yarn install" to download dependencies
+- from inside the directory (i.e. emi_calculator) run "yarn start" to run the project
 - Open "http://localhost:8080/" into browser (prefer chrome) to see the running project
