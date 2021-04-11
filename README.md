@@ -21,13 +21,10 @@ The application shows **Loan EMI, Total Interest Payable & Total Payment**. The 
 # EMI Calculator Output image
 
 - <p align="center">
-    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a1.png">
+    <img src="https://github.com/Arun70/emi_calculator/blob/master/a1.png">
   </p>
 - <p align="center">
-    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a2.png">
-  </p>
-- <p align="center">
-    <img src="https://github.com/codescreen/CodeScreen_c7ykjth0/blob/myWork/a3.png">
+    <img src="https://github.com/Arun70/emi_calculator/blob/master/a2.png">
   </p>
 
 # How to run the project
