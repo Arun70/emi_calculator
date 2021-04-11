@@ -16,43 +16,7 @@ Write a web application that can accept these as a user input,
 
 `principal, interest rate, loan tenure`
 
-The application should show **Loan EMI, Total Interest Payable & Total Payment**. The application also should show each year (Including months) payable/paid EMI breakup.
-
-For a reference, you can refer https://emicalculator.net/
-
-Please consider these tasks when you are building this application,
-
-- EMI calculation should be visible on every change
-
-- Do not use any third part component library to build the UI.
-
-- Only for showing chart, you can use a third party library.
-
-- The application should not be identical to https://emicalculator.net/
-
-### **Important Points About Coding:**
-
-- The submission must have full unit test coverage.
-
-- Prefer React with functional components. Building using typescript is good to have
-
-- Use Webpack to build project.
-
-- Design the solution considering future use case (as if writing production grade code, avoid if-else waterfalls)
-
-- You would be asked to enhance the same solution for in-office interview
-
-- Ideally it should take 3-4 days to implement, if you need more time do inform us upfront.
-
-- Accompany a Readme with instructions to execute your program.
-
-**We value integrity the most in our potential candidates. Please do not share the coding problem or solution with any one. Avoid publishing your code in any public forum.**
-
-## Submitting your solution
-
-Please push your changes to the `master branch` of this repository. You can push one or more commits. <br>
-
-Once you are finished with the task, please click the `Complete task` link on <a href="https://app.codescreen.dev/#/codescreentestd2a13286-20c8-485b-8fb9-5480289c0097" target="_blank">this screen</a>.
+The application shows **Loan EMI, Total Interest Payable & Total Payment**. The application also shows each year (Including months) payable/paid EMI breakup.
 
 # EMI Calculator Output image
 
