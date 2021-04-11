@@ -1,4 +1,4 @@
-# EMI Calculator - Front End Coding Exercise
+# EMI Calculator
 
 In a country of Coderland, EMI for Home loan is calculated based on interest rate, principal and loan tenure. The EMI calculates based on the below formula,
 
